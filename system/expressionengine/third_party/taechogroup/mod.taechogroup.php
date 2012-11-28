@@ -35,9 +35,7 @@ class Taechogroup extends Channel
     // ----------------------------------------
     public function example_one()
     {
-        $css_file = APPPATH . '../../css/styles.css';
-        
-        return filemtime($css_file);
+        return "hi, I will just output this message";
     }
 
     // =================
