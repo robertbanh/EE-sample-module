@@ -86,6 +86,20 @@ class Taechogroup extends Channel
     }
 
     // =================
+    // {exp:taechogroup:secure_form_register_user}
+    // =================
+    public function secure_form_register_user()
+    {
+        $form_details = array(
+                  'id'             => $this->EE->TMPL->fetch_param('id'),
+                  'class'          => $this->EE->TMPL->fetch_param('class'),
+                  'secure'         => TRUE,
+                  'action'         => '/?ACT=' . $this->EE->functions->fetch_action_id('Taechogroup', 'register_user')
+                  );
+        return $this->EE->functions->form_declaration($form_details);
+    }
+
+    // =================
     /* 
       {exp:taechogroup:favorites}
           {title}
